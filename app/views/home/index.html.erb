@@ -4,7 +4,7 @@
   <ul>
   <% @categories.each do  |category|%>
   <li><%= category.title  %></li>
-  <div class="card" id="task">
+  <div class="card" id="<%= category.id %>">
     <ul>
       <% category.tasks.each do |task|  %>
       <li>
@@ -42,8 +42,6 @@ const $textSpeech = $(document.querySelectorAll(".container ul > .card")[1]);
 const $textShortStory = $(document.querySelectorAll(".container ul > .card")[2]);
 const $texts = $(document.querySelectorAll(".container ul > .card"));
 
-console.log(document.querySelectorAll(".container li")[0]);
-console.log(document.querySelectorAll(".container ul > .card"));
 
 
 

@@ -1,2 +1,10 @@
-document.getElementById("task").querySelectorAll('ul')[0].insertAdjacentHTML("beforeend", "<%= j render 'task', task: @task %>");
+
+// on a ajouté le id="<%= @category.id %>" dasn l'index.html ce qui permet d'ajouter la tâche dans la bonne catégorie
+
+// on a transformé le code d'en dessous qui permettait d'ajouter une task :
+
+//document.getElementById('<%= @category.id %>').querySelectorAll('ul')[0].insertAdjacentHTML("beforeend", "<%= j render 'task', task: @task %>");
+
+// en ce code ci dessous, qui a transformé le code en javascript, ce qui permet de lui appliquer des effets comme fadeIn
+const $newTask = $("<%= j render 'task', task: @task %>").appendTo("#<%= @category.id %> ul").hide().fadeIn(300)
 
