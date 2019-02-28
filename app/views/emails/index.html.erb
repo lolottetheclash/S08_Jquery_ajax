@@ -1,0 +1,29 @@
+<div class="containerEmail">
+
+	<%= render 'emails_list' %>
+
+	<div class="showEmail">
+		<h5 class="titre">Contenu des Emails</h5>
+		<div class="content">
+			<ul style="list-style-type:none;">
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+
+<script>
+
+const $sousMail = $(document.querySelector(".showEmail"));
+$sousMail.hide();
+const $sousMail1 = $(document.querySelectorAll(".showEmail ul li"));
+const $title = $(document.querySelectorAll(".sousEmail ul li"));
+
+
+
+$title.on('click',() =>{
+$sousMail.fadeToggle(500);
+});
+
+</script>
